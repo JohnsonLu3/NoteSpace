@@ -13,7 +13,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
+                loaders: ['babel-loader'],
                 exclude: /node_modules/
             },
             {
@@ -23,7 +23,7 @@ module.exports = {
         ]
     },
     output: {
-        path: 'src',
+        path: path.resolve(__dirname, 'src'),
         filename: 'js/bundle.min.js'
     },
     plugins: [
