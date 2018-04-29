@@ -33,6 +33,33 @@ a {
     box-shadow: -1px 7px 22px 5px rgba(0,0,0,0.16);
 }
 
+#board button{
+    background-color:#44c767;
+	-moz-border-radius:100%;
+	-webkit-border-radius:100%;
+	border-radius: 100%;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:28px;
+    height: 2em;
+    width: 2em;
+	text-align: center;
+	text-decoration:none;
+    border-style: none;
+    position: absolute;
+    right: 2em;
+    top: 2.5em;
+}
+
+#board button:focus {
+    outline: none;
+}
+
+#board button:hover {
+    background-color:#5cbf2a;
+}
+
 #footer{
     background-color: #3d3b43;
     color: #e3e0de;
