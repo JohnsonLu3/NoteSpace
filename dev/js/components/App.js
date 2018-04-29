@@ -1,6 +1,7 @@
 import React from 'react';
-import UserList from '../containers/Header';
-import UserDetails from '../containers/Footer';
+import Header from '../containers/Header';
+import Footer from '../containers/Footer';
+require('../../scss/style.scss');
 
 const App = () => (
     <div>
