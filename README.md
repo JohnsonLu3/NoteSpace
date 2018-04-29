@@ -1,4 +1,4 @@
-# React.js with Redux
+# NoteSpace made with React.js with Redux
 
 ## Getting Started
 
