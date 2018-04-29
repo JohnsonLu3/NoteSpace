@@ -1,3 +1,12 @@
+$primary: #2c8098;
+$secondary: #d0778f;
+$info: #bdd8e8;
+$success: #559364;
+$danger: #ff6760;
+$light: #f8f9fb;
+$dark: #171316;
+$grey: #b1b4bd;
+
 @import url('https://fonts.googleapis.com/css?family=Tajawal');
 
 body{
@@ -47,12 +56,8 @@ a {
 
 .note{
     background-color: #b6e5e6;
-    padding: 2em;
+    padding: .5em 2em 2em 2em;
     margin: 1em;
-    display: inline-block
-}
-
-.note button{
-
-    right: 0;
+    display: inline-block;
+    width: 15%;
 }
