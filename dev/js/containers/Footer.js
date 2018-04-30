@@ -10,7 +10,7 @@ class Footer extends Component {
         return (
              <div id = "footer">
                 <a href="https://github.com/JohnsonLu3"><h1>created by Johnson Lu with React.js </h1></a>
-                <a href="https://reactjs.org/"><img src="../img/react.png" id="reactIco"/></a>
+                <a href="https://reactjs.org/"><img src="./img/react.png" id="reactIco"/></a>
             </div>
         );
     }
