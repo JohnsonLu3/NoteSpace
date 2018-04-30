@@ -9,7 +9,7 @@ class Board extends Component {
      render() {
         return (
              <div id = "board">
-                    <button type="button" className="btn btn-success">+</button>
+                    <i id="addButton" className="fa fa-plus-circle fa-3x"></i>
             </div>
         );
     }

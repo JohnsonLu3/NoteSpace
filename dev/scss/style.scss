@@ -28,40 +28,24 @@ a {
 #header{
     background-color: whitesmoke;
     font-size: .5em;
-    padding: .1em 2em .1em 2em;
+    padding: .2em 2em .2em 2em;
     -webkit-box-shadow: -1px 7px 22px 5px rgba(0,0,0,0.16);
     -moz-box-shadow: -1px 7px 22px 5px rgba(0,0,0,0.16);
     box-shadow: -1px 7px 22px 5px rgba(0,0,0,0.16);
 }
 
-#board button{
-    background-color:#44c767;
-	-moz-border-radius:100%;
-	-webkit-border-radius:100%;
-	border-radius: 100%;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Impact;
-	font-size:28px;
-    height: 2em;
-    width: 2em;
-	text-align: center;
-	text-decoration:none;
-    border-style: none;
+
+#addButton{
     position: absolute;
-    right: 2em;
-    top: 2.5em;
+    top: 0;
+    right: 2%;
+    color:#44c767;
+
 }
 
-#board{
-}
-
-#board button:focus {
-    outline: none;
-}
-
-#board button:hover {
-    background-color:#5cbf2a;
+#addButton:hover {
+    cursor:pointer;
+    color:#5cbf2a;
 }
 
 #footer{
