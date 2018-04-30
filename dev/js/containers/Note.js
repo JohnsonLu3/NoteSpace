@@ -8,8 +8,8 @@ class Note extends Component {
              return (
                 <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
-                        <button>edit</button>
-                        <button>del</button>
+                        <i className="fa fa-edit fa-2x" onClick=""></i>
+                        <i className="fa fa-trash fa-2x" onClick=""></i>
                     </div>
                     <div className="noteContents">
                         <h2>{note.Header}</h2>

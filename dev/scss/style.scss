@@ -8,6 +8,7 @@ $dark: #171316;
 $grey: #b1b4bd;
 
 @import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body{
     font-family: 'Tajawal', sans-serif;
@@ -96,9 +97,19 @@ a {
 }
 
 .editButtons{
-    padding-left: 15em;
-    margin: 1em;
+    padding-left: 75%;
+    margin: 2%;
 }
+
+.editButtons i{
+    color: whitesmoke;
+    padding: 5px;
+}
+
+.editButtons i:hover{
+	cursor:pointer;
+}
+
 
 .noteContents{
     padding: .5em 2em 2em 2em;
