@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 class Note extends Component {
-
-     renderNote(){
+    
+     renderNote(){  
          return this.props.notes.map((note) => {
              return (
-                <div className="Note" key={note.id}>
+                <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
                         <button>edit</button>
                         <button>del</button>
