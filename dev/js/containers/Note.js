@@ -3,9 +3,23 @@ import {connect} from 'react-redux';
 
 class Note extends Component {
     
-     renderNote(){  
-         return this.props.notes.map((note) => {
-             return (
+    editModel(note){
+        return (
+                <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
+                    <div className = "editButtons">
+                        <i className="fa fa-check fa-2x" onClick=""></i>
+                        <i className="fa fa-ban fa-2x" onClick=""></i>
+                    </div>
+                    <div className="noteContents">
+                        <textarea  rows="1" cols="42">{note.Header}</textarea>
+                        <textarea  rows="5" cols="42">{note.Body}</textarea>
+                    </div>
+                </div>
+        );
+    }
+
+    noteModel(note){
+        return (
                 <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
                         <i className="fa fa-edit fa-2x" onClick=""></i>
@@ -17,6 +31,15 @@ class Note extends Component {
                     </div>
                 </div>
             );
+    }
+
+     renderNote(){  
+         return this.props.notes.map((note) => {
+             if(note.EditMode){
+                return(this.editModel(note))
+             }else{
+                return(this.noteModel(note))
+             }
         });
      }
 

@@ -45,7 +45,7 @@ a {
 
 #addButton:hover {
     cursor:pointer;
-    color:#5cbf2a;
+    color:#5acf3b;
 }
 
 #footer{
@@ -67,6 +67,38 @@ a {
 #reactIco{
     height: 5em;
     padding: .1em 1em .1em 1em;
+}
+
+#reactIco:hover{
+    -moz-animation: spin 2s infinite;
+    -o-animation: spin 2s infinite;
+    -webkit-animation: spin 2s infinite;
+    animation: spin 2s infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+    0% { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(359deg); }
+}
+
+@-ms-keyframes spin {
+    0% { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
 }
 
 .Note{
@@ -92,6 +124,7 @@ a {
 
 .editButtons i:hover{
 	cursor:pointer;
+    color: #e5e5e5;
 }
 
 
