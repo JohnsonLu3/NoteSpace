@@ -3,6 +3,10 @@ import {connect} from 'react-redux';
 
 class Note extends Component {
     
+    changeColor(val, note){
+        note.Color = val;
+    }
+
     editModel(note){
         return (
                 <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
@@ -11,8 +15,12 @@ class Note extends Component {
                         <i className="fa fa-ban fa-2x" onClick=""></i>
                     </div>
                     <div className="noteContents">
-                        <textarea  rows="1" cols="42">{note.Header}</textarea>
-                        <textarea  rows="5" cols="42">{note.Body}</textarea>
+                        <textarea  rows="1" defaultValue={note.Header}></textarea>
+                        <textarea  rows="5" defaultValue={note.Body}></textarea>
+                    </div>
+                    <div>
+                    <input type="color" name="noteColor" value={note.Color} onChange={this.changeColor(this.value, note)}/>
+
                     </div>
                 </div>
         );

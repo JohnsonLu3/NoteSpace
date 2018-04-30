@@ -112,6 +112,19 @@ a {
     box-shadow: 10px 10px 19px -4px rgba(0,0,0,0.25);
 }
 
+.Note textarea{
+    width: 100%;
+}
+
+.Note input{
+    width: 80%;
+    margin: 0% 8% 5% 8%;
+}
+
+.noteContents{
+    padding: 2% 5% 2% 5%;
+}
+
 .editButtons{
     padding-left: 75%;
     margin: 2%;
@@ -125,9 +138,4 @@ a {
 .editButtons i:hover{
 	cursor:pointer;
     color: #e5e5e5;
-}
-
-
-.noteContents{
-    padding: .5em 2em 2em 2em;
 }

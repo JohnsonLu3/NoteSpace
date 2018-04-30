@@ -20,7 +20,7 @@ export default function () {
             FontColor: "",
             X: 100,
             Y: 100,
-            EditMode : false
+            EditMode : true
         },
         {
             id: 3,
