@@ -3,9 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {addNote} from '../actions/NoteActions';
-/*
- * We need "if(!this.props.user)" because we set state to null by default
- * */
 
 class Board extends Component {
      render() {
@@ -26,6 +23,4 @@ function matchDispatchToProps(dispatch){
          dispatch);
 }
 
-// We don't want to return the plain UserList (component) anymore, we want to return the smart Container
-//      > UserList is now aware of state and actions
 export default connect(matchDispatchToProps)(Board);
