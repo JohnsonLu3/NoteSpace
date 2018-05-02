@@ -14,9 +14,9 @@ class Note extends Component {
         note.Color = val;
     }
 
-    editModel(note){
+    editModel(note, i){
         return (
-                <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
+                <div className="Note" key={note.id}  style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
                         <i className="fa fa-check fa-2x" onClick={() => this.props.saveEdit(note)}></i>
                         <i className="fa fa-ban fa-2x" onClick={() => this.props.cancelEdit(note)}></i>
@@ -33,7 +33,7 @@ class Note extends Component {
         );
     }
 
-    noteModel(note){
+    noteModel(note, i){
         return (
                 <div className="Note" key={note.id} style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
@@ -49,11 +49,11 @@ class Note extends Component {
     }
 
      renderNote(){  
-         return this.props.notes.map((note) => {
+         return this.props.notes.map((note, i) => {
              if(note.EditMode){
-                return(this.editModel(note))
+                return(this.editModel(note, i))
              }else{
-                return(this.noteModel(note))
+                return(this.noteModel(note, i))
              }
         });
      }

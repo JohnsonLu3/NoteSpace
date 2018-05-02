@@ -18,7 +18,6 @@ export const addNote = () => {
 };
 
 export const editNote = (note) => {
-    console.log("editNote");
     return {
         type: 'NOTE_EDIT',
         payload: note
@@ -26,7 +25,6 @@ export const editNote = (note) => {
 };
 
 export const removeNote = (note) => {
-    console.log("removeNote");
     return {
         type: 'NOTE_REMOVE',
         payload: note
@@ -34,7 +32,6 @@ export const removeNote = (note) => {
 };
 
 export const saveEdit = (note) => {
-    console.log("saveEdit");
     return {
         type: 'EDIT_SAVE',
         payload: note
@@ -42,7 +39,6 @@ export const saveEdit = (note) => {
 };
 
 export const cancelEdit = (note) => {
-    console.log("cancelEdit");
     return {
         type: 'EDIT_CANCEL',
         payload: note
