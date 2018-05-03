@@ -1,6 +1,5 @@
 import {combineReducers} from 'redux';
-import NoteReducer from './reducer-notes';
-import NoteListener from '../listeners/listener-notes';
+import notes from './reducer-notes';
 
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
@@ -8,8 +7,7 @@ import NoteListener from '../listeners/listener-notes';
  * */
 
 const allReducers = combineReducers({
-    notes: NoteReducer,
-    noteListener: NoteListener
+    notes
 });
 
 export default allReducers

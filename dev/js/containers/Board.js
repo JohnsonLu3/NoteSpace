@@ -8,10 +8,16 @@ class Board extends Component {
      render() {
         return (
              <div id = "board">
-                    <i id="addButton" onClick ={() => this.props.addNote()}className="fa fa-plus-circle fa-3x"></i>
+                    <i id="addButton" onClick ={() => this.props.addNote()} className="fa fa-plus-circle fa-3x"></i>
             </div>
         );
     }
+}
+
+function mapStateToProps(state) {
+    return {
+        notes: state.notes,
+    };
 }
 
 // Actions
@@ -23,4 +29,4 @@ function matchDispatchToProps(dispatch){
          dispatch);
 }
 
-export default connect(matchDispatchToProps)(Board);
+export default connect(mapStateToProps,matchDispatchToProps)(Board);

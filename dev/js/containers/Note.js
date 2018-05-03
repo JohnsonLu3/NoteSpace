@@ -56,6 +56,7 @@ class Note extends Component {
                 return(this.noteModel(note, i))
              }
         });
+        
      }
 
      render() {
@@ -71,7 +72,7 @@ class Note extends Component {
 //      > whenever state changes, the notes will automatically re-render
 function mapStateToProps(state) {
     return {
-        notes: state.notes
+        notes: state.notes,
     };
 }
 
@@ -87,6 +88,4 @@ function matchDispatchToProps(dispatch){
          dispatch);
 }
 
-// We don't want to return the plain UserList (component) anymore, we want to return the smart Container
-//      > UserList is now aware of state and actions
 export default connect(mapStateToProps,matchDispatchToProps)(Note);
