@@ -1,5 +1,4 @@
 function notes(state=[], action){
-    console.log(action);
     
     switch(action.type){
         case "NOTE_ADD":
@@ -22,18 +21,24 @@ function notes(state=[], action){
 
             break;
         case "NOTE_EDIT":
+            var noteEdit = action.payload
+            console.log(noteEdit);
+            noteEdit.EditMode = true;
+            console.log(noteEdit);
+            
             return [
-                ...state.slice(0,i),
-                
-                ...state.slice(i + 1)
+                ...state.slice(0, action.index),
+                noteEdit,
+                ...state.slice( action.index + 1)
             ];
 
             break;
         case "NOTE_REMOVE": 
-            const i = action.payload.id -1;       
+
             return [
-                ...state.slice(0,i),
-                ...state.slice(i + 1)
+                ...state.slice(0, action.index),
+                
+                ...state.slice( action.index + 1)
             ];
 
             break;
@@ -42,9 +47,17 @@ function notes(state=[], action){
             return action.payload;
             break;
         case "EDIT_CANCEL":
-            console.log("EDIT_CANCEL");
-            return action.payload;
-            break;
+             var noteEdit = action.payload
+            console.log(noteEdit);
+            noteEdit.EditMode = false;
+            console.log(noteEdit);
+            
+            return [
+                ...state.slice(0, action.index),
+                noteEdit,
+                ...state.slice( action.index + 1)
+            ];
+
         default:
             return state;
     }

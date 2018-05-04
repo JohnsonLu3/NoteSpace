@@ -4,30 +4,34 @@ export const addNote = () => {
     }
 };
 
-export const editNote = (note) => {
+export const editNote = (note, i) => {
     return {
         type: 'NOTE_EDIT',
-        payload: note
+        payload: note,
+        index: i
     }
 };
 
-export const removeNote = (note) => {
+export const removeNote = (note, i) => {
     return {
         type: 'NOTE_REMOVE',
-        payload: note
+        payload: note,
+        index: i
     }
 };
 
-export const saveEdit = (note) => {
+export const saveEdit = (note, i) => {
     return {
         type: 'EDIT_SAVE',
-        payload: note
+        payload: note,
+        index: i
     }
 };
 
-export const cancelEdit = (note) => {
+export const cancelEdit = (note, i) => {
     return {
         type: 'EDIT_CANCEL',
-        payload: note
+        payload: note,
+        index: i
     }
 };
