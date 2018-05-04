@@ -27,8 +27,8 @@ class Note extends Component {
                         <i className="fa fa-ban fa-2x" onClick={() => this.props.cancelEdit(note, i)}></i>
                     </div>
                     <div className="noteContents">
-                        <textarea  id="noteHeader" rows="1" defaultValue={note.Header}></textarea>
-                        <textarea  id="noteBody" rows="5" defaultValue={note.Body}></textarea>
+                        <input  type="text" id="noteHeader"  defaultValue={note.Header}></input>
+                        <textarea  id="noteBody" rows="5" col="50" wrap="hard" defaultValue={note.Body}></textarea>
                     </div>
                     <div>
                     <input type="color" id="noteColor" name="noteColor" defaultValue={note.Color} />
