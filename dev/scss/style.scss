@@ -38,15 +38,29 @@ a {
 #addButton{
     position: absolute;
     top: 0;
-    right: 2%;
+    right: 5%;
     color:#44c767;
 
 }
 
 #addButton:hover {
     cursor:pointer;
-    color:#5acf3b;
+    color:#5be580;
 }
+
+#clearButton{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    color:#e56a6b;
+
+}
+
+#clearButton:hover {
+    cursor:pointer;
+    color:#ff7f80;
+}
+
 
 #footer{
     background-color: #3d3b43;

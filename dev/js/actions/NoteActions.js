@@ -38,3 +38,9 @@ export const cancelEdit = (note, i) => {
         index: i
     }
 };
+
+export const clearNotes = () =>{
+    return{
+        type: 'CLEAR_ALL'
+    }
+};

@@ -60,7 +60,12 @@ function notes(state=[], action){
                 noteEdit,
                 ...state.slice( action.index + 1)
             ];
-
+        break;
+        
+        case "CLEAR_ALL":
+            return [];
+        break;
+        
         default:
             return state;
     }
