@@ -20,11 +20,14 @@ export const removeNote = (note, i) => {
     }
 };
 
-export const saveEdit = (note, i) => {
+export const saveEdit = (note, i, header, body, color) => {
     return {
         type: 'EDIT_SAVE',
         payload: note,
-        index: i
+        index: i,
+        header,
+        body,
+        color
     }
 };
 

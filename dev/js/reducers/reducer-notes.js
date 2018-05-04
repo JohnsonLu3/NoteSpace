@@ -22,10 +22,7 @@ function notes(state=[], action){
             break;
         case "NOTE_EDIT":
             var noteEdit = action.payload
-            console.log(noteEdit);
             noteEdit.EditMode = true;
-            console.log(noteEdit);
-            
             return [
                 ...state.slice(0, action.index),
                 noteEdit,
@@ -34,24 +31,28 @@ function notes(state=[], action){
 
             break;
         case "NOTE_REMOVE": 
-
             return [
                 ...state.slice(0, action.index),
-                
                 ...state.slice( action.index + 1)
             ];
 
             break;
         case "EDIT_SAVE":
-            console.log("EDIT_SAVE");
-            return action.payload;
+            var noteSave = action.payload
+            noteSave.EditMode = false;
+            noteSave.Header = action.header;
+            noteSave.Body = action.body;
+            noteSave.Color = action.color;
+            
+            return [
+                ...state.slice(0, action.index),
+                noteSave,
+                ...state.slice( action.index + 1)
+            ];
             break;
         case "EDIT_CANCEL":
              var noteEdit = action.payload
-            console.log(noteEdit);
-            noteEdit.EditMode = false;
-            console.log(noteEdit);
-            
+            noteEdit.EditMode = false;            
             return [
                 ...state.slice(0, action.index),
                 noteEdit,

@@ -10,23 +10,28 @@ import {cancelEdit} from '../actions/NoteActions';
 
 class Note extends Component {
     
-    changeColor(val, note){
-        note.Color = val;
-    }
-
     editModel(note, i){
         return (
                 <div className="Note" key={note.id} index={i} style={{backgroundColor: note.Color}}>
                     <div className = "editButtons">
-                        <i className="fa fa-check fa-2x" onClick={() => this.props.saveEdit(note, i)}></i>
+                        
+                        <i className="fa fa-check fa-2x" onClick={
+                                () => this.props.saveEdit(note,
+                                                            i,
+                                                            document.getElementById('noteHeader').value,
+                                                            document.getElementById('noteBody').value,
+                                                            document.getElementById('noteColor').value
+                                                            )
+                            }></i>
+
                         <i className="fa fa-ban fa-2x" onClick={() => this.props.cancelEdit(note, i)}></i>
                     </div>
                     <div className="noteContents">
-                        <textarea  rows="1" defaultValue={note.Header}></textarea>
-                        <textarea  rows="5" defaultValue={note.Body}></textarea>
+                        <textarea  id="noteHeader" rows="1" defaultValue={note.Header}></textarea>
+                        <textarea  id="noteBody" rows="5" defaultValue={note.Body}></textarea>
                     </div>
                     <div>
-                    <input type="color" name="noteColor" value={note.Color} onChange={this.changeColor(this.value, note)}/>
+                    <input type="color" id="noteColor" name="noteColor" defaultValue={note.Color} />
 
                     </div>
                 </div>
