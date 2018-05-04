@@ -1,6 +1,6 @@
 const notes =[
         {
-            id: 1,
+            id: "XwPp9xazJ0ku5CZnlmgAx2Dld8SHkAeT",
             Header: "Welcome to NoteSpace",
             Body: "Here you can add stick notes",
             Color: "#b6e5e6",
@@ -11,7 +11,7 @@ const notes =[
             EditMode : false
         },
         {
-            id: 2,
+            id: "sKCx49VgtHZ59bJOTLcU0Gr06ogUnDJi",
             Header: "We are example notes",
             Body: "This is just a sample of what you can do here on NoteSpace!",
             Color: "#e56a6b",
@@ -22,7 +22,7 @@ const notes =[
             EditMode : false
         },
         {
-            id: 3,
+            id: "9xazJ049VgtHlmgAxHZ59bJGr0xaHk1",
             Header: "How to use NoteSpace",
             Body: "Clicking the plus icon to the right with create a new note. Each note has an edit and remove button on the top right corner.",
             Color: "#ffd6de",

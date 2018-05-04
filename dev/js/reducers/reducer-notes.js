@@ -1,9 +1,11 @@
+import HashGenerator from "../beans/HashGenerator"
+
 function notes(state=[], action){
     
     switch(action.type){
         case "NOTE_ADD":
             var note = {
-                id: state.length,
+                id: HashGenerator(),
                 Header: "",
                 Body: "",
                 Color: "#b6e5e6",
