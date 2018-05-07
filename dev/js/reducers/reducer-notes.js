@@ -23,14 +23,34 @@ function notes(state=[], action){
 
             break;
         case "NOTE_EDIT":
-            var noteEdit = action.payload
-            noteEdit.EditMode = true;
-            return [
-                ...state.slice(0, action.index),
-                noteEdit,
-                ...state.slice( action.index + 1)
-            ];
+            // var noteEdit = action.payload
+            // noteEdit.EditMode = true;
+            // return [
+            //     ...state.slice(0, action.index),
+            //     noteEdit,
+            //     ...state.slice( action.index + 1)
+            // ];
+            var newState = [];
+            var overWrite = false;
 
+            state.forEach(function(note){
+                if(note.id == action.payload.id){
+                    note.EditMode = true;
+                }else{
+                    if(note.EditMode){
+                        overWrite = true;
+                        note.EditMode = false;
+                    }
+                }
+                newState.push(note);
+            });
+            // if(overWrite){
+            //     if(confirm("You have unsaved edited notes do you want to cancel?")){
+            //         return newState;
+            //     }
+            // }
+            // return state;
+            return newState;
             break;
         case "NOTE_REMOVE": 
             return [
@@ -53,7 +73,7 @@ function notes(state=[], action){
             ];
             break;
         case "EDIT_CANCEL":
-             var noteEdit = action.payload
+            var noteEdit = action.payload
             noteEdit.EditMode = false;            
             return [
                 ...state.slice(0, action.index),
